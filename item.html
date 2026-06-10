@@ -564,62 +564,7 @@
 
         </div>
 
-        <div class="card">
-
-          <h2>
-
-            ${disease.prevention.title}
-
-          </h2>
-
-          <ul>
-
-            ${disease.prevention.items.map(item => `
-
-              <li>${item}</li>
-
-            `).join("")}
-
-          </ul>
-
-        </div>
-
-      </div>
-      <div class="card">
-
-  <h2>
-    ${data.hospitalSuggestion.title}
-  </h2>
-
-  ${data.hospitalSuggestion.items.map(item => `
-
-    <div class="hospital-item">
-
-      <div class="hospital-top">
-
-        <span class="hospital-level">
-          ${item.level}
-        </span>
-
-        <span class="hospital-time">
-          ${item.time}
-        </span>
-
-      </div>
-
-      <p class="hospital-text">
-        ${item.text}
-      </p>
-
-      <div class="exam-tags">
-
-        ${item.exam.map(exam => `
-          <span>${exam}</span>
-        `).join("")}
-
-      </div>
-
-    </div>
+       
 
   `).join("")}
 
