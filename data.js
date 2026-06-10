@@ -116,7 +116,69 @@ const diseases = [
       "Ăn giảm muối",
       "Khám định kỳ"
     ]
-  }
+  },
+   hospitalSuggestion:{
+  title:"Khuyến nghị thăm khám",
+
+  items:[
+
+    {
+      level:"Khẩn cấp",
+
+      time:"Trong vài phút đến dưới 1 giờ",
+
+      text:
+        "Nếu xuất hiện méo miệng, yếu tay chân hoặc nói khó cần gọi cấp cứu và nhập viện ngay để đánh giá đột quỵ.",
+
+      exam:
+        [
+          "CT não",
+          "MRI não",
+          "Xét nghiệm đông máu",
+          "Đường huyết"
+        ]
+    },
+
+    {
+      level:"Nên khám sớm",
+
+      time:"Trong 24–72 giờ",
+
+      text:
+        "Người đau đầu kéo dài, tăng huyết áp hoặc chóng mặt tái diễn nên khám chuyên khoa thần kinh hoặc tim mạch.",
+
+      exam:
+        [
+          "Đo huyết áp",
+          "Điện tim",
+          "Siêu âm mạch máu"
+        ]
+    },
+
+    {
+      level:"Tầm soát định kỳ",
+
+      time:"Mỗi 6–12 tháng",
+
+      text:
+        "Người có bệnh nền như tăng huyết áp, tiểu đường hoặc rối loạn mỡ máu nên kiểm tra định kỳ để giảm nguy cơ đột quỵ.",
+
+      exam:
+        [
+          "Mỡ máu",
+          "HbA1c",
+          "Siêu âm tim"
+        ]
+    }
+
+  ],
+
+  guidelineSource:[
+    "American Heart Association (AHA)",
+    "World Stroke Organization",
+    "Bộ Y tế Việt Nam"
+  ]
+}
 },
 
 
