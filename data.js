@@ -304,256 +304,74 @@ const diseases = [
       "Ngủ đủ giấc",
       "Giảm stress"
     ]
-  }
-},
-
-
-
-
-
-
-
-/* =======================================================
-   3. ĐÁI THÁO ĐƯỜNG
-======================================================= */
-
-{
-  id: "dai-thao-duong",
-
-  seoTitle:
-    "Thông tin Đái tháo đường",
-
-  seoDescription:
-    "Thông tin bệnh đái tháo đường và kiểm soát đường huyết.",
-
-  title:
-    "Đái tháo đường",
-
-  hero: {
-    badge: "Nội tiết",
-    color1: "#2e7d32",
-    color2: "#66bb6a",
-
-    desc:
-      "Đái tháo đường là bệnh rối loạn chuyển hóa đường huyết mạn tính."
   },
+   hospitalSuggestion:{
+  title:"Khuyến nghị thăm khám",
 
-  overview: {
-    title: "Đái tháo đường là gì?",
+  items:[
 
-    content:
-      "Bệnh xảy ra khi cơ thể thiếu insulin hoặc sử dụng insulin không hiệu quả.",
+    {
+      level:"Khẩn cấp",
 
-    info:
-      "Kiểm soát đường huyết tốt giúp giảm biến chứng."
-  },
+      time:"Trong vài giờ",
 
-  symptoms: {
-    title: "Triệu chứng",
+      text:
+        "Nếu huyết áp tăng rất cao kèm đau ngực, khó thở hoặc đau đầu dữ dội cần đến cơ sở y tế ngay.",
 
-    warning:
-      "Đường huyết quá cao kéo dài có thể gây biến chứng tim mạch và thận.",
+      exam:[
+        "Điện tim",
+        "Xét nghiệm tim mạch",
+        "CT não nếu nghi đột quỵ"
+      ]
+    },
 
-    items: [
+    {
+      level:"Nên khám sớm",
 
-      {
-        title: "Khát nước",
-        desc:
-          "Uống nhiều nước bất thường."
-      },
+      time:"Trong 1–2 tuần",
 
-      {
-        title: "Tiểu nhiều",
-        desc:
-          "Tiểu nhiều lần trong ngày."
-      },
+      text:
+        "Người có huyết áp ≥140/90 mmHg đo nhiều lần nên khám chuyên khoa tim mạch.",
 
-      {
-        title: "Sụt cân",
-        desc:
-          "Giảm cân không rõ nguyên nhân."
-      },
+      exam:[
+        "Đo huyết áp",
+        "Mỡ máu",
+        "Đường huyết",
+        "Chức năng thận"
+      ]
+    },
 
-      {
-        title: "Mệt mỏi",
-        desc:
-          "Cơ thể thiếu năng lượng."
-      }
+    {
+      level:"Theo dõi định kỳ",
 
-    ]
-  },
+      time:"Mỗi 3–6 tháng",
 
-  emergency: {
-    title: "Xử trí",
+      text:
+        "Người đã được chẩn đoán tăng huyết áp cần tái khám định kỳ để kiểm soát biến chứng.",
 
-    items: [
+      exam:[
+        "Điện tim",
+        "Siêu âm tim",
+        "Xét nghiệm nước tiểu"
+      ]
+    }
 
-      {
-        title: "Đo đường huyết",
-        desc:
-          "Theo dõi thường xuyên."
-      },
+  ],
 
-      {
-        title: "Uống thuốc đúng",
-        desc:
-          "Theo chỉ định bác sĩ."
-      },
-
-      {
-        title: "Đi khám",
-        desc:
-          "Nếu đường huyết tăng quá cao."
-      }
-
-    ]
-  },
-
-  risks: {
-    title: "Nguy cơ",
-
-    items: [
-      "Béo phì",
-      "Ít vận động",
-      "Tiền sử gia đình",
-      "Ăn nhiều đường"
-    ]
-  },
-
-  prevention: {
-    title: "Phòng ngừa",
-
-    items: [
-      "Giảm đường",
-      "Tập thể dục",
-      "Kiểm soát cân nặng",
-      "Khám định kỳ"
-    ]
-  }
-},
-
-
-
-
-
-
-
-/* =======================================================
-   4. SỐT XUẤT HUYẾT
-======================================================= */
-
-{
-  id: "sot-xuat-huyet",
-
-  seoTitle:
-    "Thông tin Sốt xuất huyết",
-
-  seoDescription:
-    "Thông tin sốt xuất huyết, dấu hiệu cảnh báo và phòng bệnh.",
-
-  title:
-    "Sốt xuất huyết",
-
-  hero: {
-    badge: "Truyền nhiễm",
-    color1: "#ff7043",
-    color2: "#ffab91",
-
-    desc:
-      "Sốt xuất huyết do virus Dengue lây truyền qua muỗi vằn."
-  },
-
-  overview: {
-    title: "Sốt xuất huyết là gì?",
-
-    content:
-      "Bệnh truyền nhiễm cấp tính gây sốt cao và có thể xuất huyết nguy hiểm.",
-
-    info:
-      "Theo dõi sát giai đoạn ngày 3–7 của bệnh."
-  },
-
-  symptoms: {
-    title: "Triệu chứng",
-
-    warning:
-      "Đau bụng, nôn nhiều hoặc chảy máu là dấu hiệu nặng.",
-
-    items: [
-
-      {
-        title: "Sốt cao",
-        desc:
-          "Sốt liên tục khó hạ."
-      },
-
-      {
-        title: "Đau đầu",
-        desc:
-          "Đau vùng trán hoặc hốc mắt."
-      },
-
-      {
-        title: "Xuất huyết",
-        desc:
-          "Chấm đỏ hoặc chảy máu."
-      },
-
-      {
-        title: "Mệt mỏi",
-        desc:
-          "Kiệt sức toàn thân."
-      }
-
-    ]
-  },
-
-  emergency: {
-    title: "Chăm sóc",
-
-    items: [
-
-      {
-        title: "Uống nhiều nước",
-        desc:
-          "Bù dịch đầy đủ."
-      },
-
-      {
-        title: "Hạ sốt đúng",
-        desc:
-          "Dùng paracetamol."
-      },
-
-      {
-        title: "Theo dõi dấu hiệu nặng",
-        desc:
-          "Đi viện ngay nếu nguy hiểm."
-      }
-
-    ]
-  },
-
-  risks: {
-    title: "Nguy cơ",
-
-    items: [
-      "Muỗi vằn",
-      "Môi trường nước đọng",
-      "Dịch lưu hành"
-    ]
-  },
-
-  prevention: {
-    title: "Phòng bệnh",
-
-    items: [
-      "Diệt lăng quăng",
-      "Ngủ màn",
-      "Xịt chống muỗi",
-      "Dọn nước đọng"
-    ]
-  }
+  guidelineSource:[
+    "European Society of Cardiology (ESC)",
+    "American College of Cardiology (ACC)",
+    "Bộ Y tế Việt Nam"
+  ]
 }
+}
+
+
+/* =======================================================
+   
+======================================================= */
+
+
+
 
 ];
