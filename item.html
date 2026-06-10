@@ -104,42 +104,34 @@
 
   <script src="./data.js"></script>
 
-  <script>
+ <script src="./data.js"></script>
 
-    const params = new URLSearchParams(window.location.search);
+<script>
 
-    const id = params.get("id");
+const params =
+  new URLSearchParams(location.search);
 
-    const data = diseases[id];
+const id = params.get("id");
 
-    if(data){
+const disease =
+  diseases.find(x => x.id === id);
 
-      document.title = data.title;
+if(disease){
 
-      document.getElementById("title").innerText = data.title;
+  document.title = disease.title;
 
-      document.getElementById("desc").innerText = data.desc;
+  document.getElementById("title")
+    .innerText = disease.title;
 
-      document.getElementById("hero").style.background =
-        `linear-gradient(135deg, ${data.color}, #ffffff22)`;
+}
+else{
 
-      data.symptoms.forEach(item => {
+  document.body.innerHTML =
+    "<h1>Không tìm thấy dữ liệu</h1>";
 
-        document.getElementById("symptoms").innerHTML +=
-          `<li>${item}</li>`;
+}
 
-      });
-
-      data.prevention.forEach(item => {
-
-        document.getElementById("prevention").innerHTML +=
-          `<li>${item}</li>`;
-
-      });
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
