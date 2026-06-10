@@ -259,7 +259,62 @@
       }
 
     }
+.hospital-item{
+  background:#f7fbff;
+  border:1px solid #dbeafe;
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:18px;
+}
 
+.hospital-top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+
+.hospital-level{
+  background:#d32f2f;
+  color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.hospital-time{
+  background:#eef2ff;
+  color:#3949ab;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+.hospital-text{
+  margin-bottom:14px;
+}
+
+.exam-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.exam-tags span{
+  background:#fff;
+  border:1px solid #d6d6d6;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:14px;
+}
+
+.guide-source{
+  margin-top:20px;
+  font-size:14px;
+  color:#666;
+}
   </style>
 
 </head>
@@ -530,6 +585,53 @@
         </div>
 
       </div>
+      <div class="card">
+
+  <h2>
+    ${data.hospitalSuggestion.title}
+  </h2>
+
+  ${data.hospitalSuggestion.items.map(item => `
+
+    <div class="hospital-item">
+
+      <div class="hospital-top">
+
+        <span class="hospital-level">
+          ${item.level}
+        </span>
+
+        <span class="hospital-time">
+          ${item.time}
+        </span>
+
+      </div>
+
+      <p class="hospital-text">
+        ${item.text}
+      </p>
+
+      <div class="exam-tags">
+
+        ${item.exam.map(exam => `
+          <span>${exam}</span>
+        `).join("")}
+
+      </div>
+
+    </div>
+
+  `).join("")}
+
+  <div class="guide-source">
+
+    <strong>Nguồn tham khảo:</strong>
+
+    ${data.hospitalSuggestion.guidelineSource.join(", ")}
+
+  </div>
+
+</div>
 
     `;
 
