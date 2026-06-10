@@ -10,7 +10,15 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Thông tin bệnh</title>
+  <title>
+    Thông tin bệnh
+  </title>
+
+  <meta
+    name="description"
+    content=""
+    id="meta-desc"
+  />
 
   <style>
 
@@ -111,9 +119,7 @@
 
     .step{
       position:relative;
-
       padding-left:60px;
-
       margin-bottom:24px;
     }
 
@@ -138,9 +144,7 @@
       color:white;
 
       display:flex;
-
       align-items:center;
-
       justify-content:center;
 
       font-weight:bold;
@@ -188,8 +192,6 @@
       border-radius:10px;
 
       font-weight:bold;
-
-      transition:0.2s;
     }
 
     .btn-primary{
@@ -246,6 +248,18 @@
       object-fit:contain;
     }
 
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:32px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -269,33 +283,48 @@
       params.get("id");
 
     const disease =
-      diseases.find(x => x.id === id);
+      diseases.find(
+        x => x.id === id
+      );
 
     if(!disease){
 
-      document.getElementById("app").innerHTML = `
+      document
+        .getElementById("app")
+        .innerHTML = `
 
-        <div class="container">
+          <div class="container">
 
-          <div class="card">
+            <div class="card">
 
-            <h1>
-              Không tìm thấy dữ liệu
-            </h1>
+              <h1>
+                Không tìm thấy dữ liệu
+              </h1>
+
+            </div>
 
           </div>
 
-        </div>
+        `;
 
-      `;
-
-      throw new Error("Disease not found");
+      throw new Error(
+        "Disease not found"
+      );
     }
 
     document.title =
-      disease.seo.title;
+      disease.seoTitle;
 
-    let html = `
+    document
+      .getElementById("meta-desc")
+      .setAttribute(
+        "content",
+        disease.seoDescription
+      );
+
+    document
+      .getElementById("app")
+      .innerHTML = `
 
       <section
         class="hero"
@@ -303,8 +332,8 @@
           background:
           linear-gradient(
             135deg,
-            ${disease.hero.colorStart},
-            ${disease.hero.colorEnd}
+            ${disease.hero.color1},
+            ${disease.hero.color2}
           );
         "
       >
@@ -315,197 +344,194 @@
 
             <img
               src="./logo-bv-new.png"
+              alt="Logo"
             >
 
           </div>
 
           <div class="badge">
+
             ${disease.hero.badge}
+
           </div>
 
           <h1>
+
             ${disease.title}
+
           </h1>
 
           <p>
-            ${disease.hero.shortDesc}
+
+            ${disease.hero.desc}
+
           </p>
 
           <div class="cta">
-    `;
 
-    disease.hero.buttons.forEach(btn => {
+            <a
+              href="#nhan-biet"
+              class="btn btn-primary"
+            >
+              Nhận biết nhanh
+            </a>
 
-      html += `
+            <a
+              href="#xu-tri"
+              class="btn btn-secondary"
+            >
+              Xử trí cấp cứu
+            </a>
 
-        <a
-          href="${btn.target}"
-          class="
-            btn
-            btn-${btn.type}
-          "
-        >
-          ${btn.text}
-        </a>
-
-      `;
-    });
-
-    html += `
           </div>
+
         </div>
+
       </section>
 
       <div class="container">
-    `;
 
-    disease.sections.forEach(section => {
+        <div class="card">
 
-      if(section.type === "overview"){
+          <h2>
 
-        html += `
+            ${disease.overview.title}
 
-          <div class="card">
+          </h2>
 
-            <h2>
-              ${section.title}
-            </h2>
+          <p>
 
-            <p>
-              ${section.content}
-            </p>
+            ${disease.overview.content}
 
-            <div class="info-box">
-              ${section.infoBox}
-            </div>
+          </p>
+
+          <div class="info-box">
+
+            ${disease.overview.info}
 
           </div>
 
-        `;
-      }
+        </div>
 
-      if(section.type === "symptoms-grid"){
+        <div
+          class="card"
+          id="nhan-biet"
+        >
 
-        html += `
+          <h2>
 
-          <div
-            class="card"
-            id="${section.id || ""}"
-          >
+            ${disease.symptoms.title}
 
-            <h2>
-              ${section.title}
-            </h2>
+          </h2>
 
-            <div class="grid">
-        `;
+          <div class="grid">
 
-        section.items.forEach(item => {
+            ${disease.symptoms.items.map(item => `
 
-          html += `
+              <div class="symptom">
 
-            <div class="symptom">
+                <h3>
+                  ${item.title}
+                </h3>
 
-              <h3>
-                ${item.title}
-              </h3>
+                <p>
+                  ${item.desc}
+                </p>
 
-              <p>
-                ${item.desc}
-              </p>
+              </div>
 
-            </div>
-
-          `;
-        });
-
-        html += `
-            </div>
-
-            <div class="warning">
-              ${section.warning}
-            </div>
+            `).join("")}
 
           </div>
-        `;
-      }
 
-      if(section.type === "steps"){
+          <div class="warning">
 
-        html += `
+            <strong>
+              Lưu ý:
+            </strong>
 
-          <div
-            class="card"
-            id="${section.id || ""}"
-          >
+            ${disease.symptoms.warning}
 
-            <h2>
-              ${section.title}
-            </h2>
-
-            <div class="steps">
-        `;
-
-        section.items.forEach(item => {
-
-          html += `
-
-            <div class="step">
-
-              <h3>
-                ${item.title}
-              </h3>
-
-              <p>
-                ${item.desc}
-              </p>
-
-            </div>
-
-          `;
-        });
-
-        html += `
-            </div>
           </div>
-        `;
-      }
 
-      if(section.type === "list"){
+        </div>
 
-        html += `
+        <div
+          class="card"
+          id="xu-tri"
+        >
 
-          <div class="card">
+          <h2>
 
-            <h2>
-              ${section.title}
-            </h2>
+            ${disease.emergency.title}
 
-            <ul>
-        `;
+          </h2>
 
-        section.items.forEach(item => {
+          <div class="steps">
 
-          html += `
-            <li>${item}</li>
-          `;
-        });
+            ${disease.emergency.items.map(item => `
 
-        html += `
-            </ul>
+              <div class="step">
+
+                <h3>
+                  ${item.title}
+                </h3>
+
+                <p>
+                  ${item.desc}
+                </p>
+
+              </div>
+
+            `).join("")}
+
           </div>
-        `;
-      }
 
-    });
+        </div>
 
-    html += `
+        <div class="card">
+
+          <h2>
+
+            ${disease.risks.title}
+
+          </h2>
+
+          <ul>
+
+            ${disease.risks.items.map(item => `
+
+              <li>${item}</li>
+
+            `).join("")}
+
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h2>
+
+            ${disease.prevention.title}
+
+          </h2>
+
+          <ul>
+
+            ${disease.prevention.items.map(item => `
+
+              <li>${item}</li>
+
+            `).join("")}
+
+          </ul>
+
+        </div>
+
       </div>
-    `;
 
-    document
-      .getElementById("app")
-      .innerHTML = html;
+    `;
 
   </script>
 
