@@ -566,10 +566,10 @@
 <div class="card">
 
   <h2>
-    ${data.hospitalSuggestion.title}
+    ${disease.hospitalSuggestion.title}
   </h2>
 
-  ${data.hospitalSuggestion.items.map(item => `
+  ${disease.hospitalSuggestion.items.map(item => `
 
     <div class="hospital-item">
 
@@ -605,7 +605,7 @@
 
     <strong>Nguồn tham khảo:</strong>
 
-    ${data.hospitalSuggestion.guidelineSource.join(", ")}
+    ${disease.hospitalSuggestion.guidelineSource.join(", ")}
 
   </div>
 
