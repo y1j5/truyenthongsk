@@ -638,26 +638,7 @@ font-family:"Montserrat",sans-serif;
     visibility:visible;
 }
 
-    
-    body{
-    color:#222;
-}
-
-.card,
-.card p,
-.card li,
-.card span,
-.card div{
-    color:#222;
-}
-
-.card h2{
-    color:#c62828;
-}
-
-a{
-    color:inherit;
-}
+  
   </style>
 
 </head>
@@ -743,34 +724,27 @@ a{
 
 
 
+<!-- BUTTON -->
 <button class="menu-toggle" id="menuToggle">
     ☰
 </button>
-<div class="site-contact">
-  <div class="site-name">Thông Tin Sức Khỏe</div>
-  
-  <div class="site-meta">
-    <span>🌐 Website:  benhviendakhoalangchanh.vn/</span>
-    <span>📇 Tổ CTXH</span>
-    <span>📞 SĐT: 09xx xxx xxx</span>
-  </div>
-</div>
-    <div class="side-menu" id="sideMenu">
+
+<!-- MENU -->
+<div class="side-menu" id="sideMenu">
 
     <div class="menu-header">
-
-        <img
-            src="./logo-bv-new.png"
-            alt="Logo"
-        >
-
+        <img src="./logo-bv-new.png" alt="">
         <h3>Danh mục bệnh</h3>
-
     </div>
 
     <div id="menuList"></div>
 
 </div>
+
+<!-- OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
 
         <div class="badge">
             ${disease.hero.badge}
@@ -806,7 +780,15 @@ a{
 
     <!-- RIGHT -->
     <div class="hero-right">
-
+<div class="site-contact">
+  <div class="site-name">Thông Tin Sức Khỏe</div>
+  
+  <div class="site-meta">
+    <span>🌐 Website:  benhviendakhoalangchanh.vn/</span>
+    <span>📇 Tổ CTXH</span>
+    <span>📞 SĐT: 09xx xxx xxx</span>
+  </div>
+</div>
         <div class="header-image">
 
             <img
@@ -1011,6 +993,57 @@ menuList.innerHTML = diseases.map(item => `
 
 `).join("");
   </script>
+<script src="./data.js?v=3"></script>
 
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const menuToggle =
+        document.getElementById("menuToggle");
+
+        const sideMenu =
+        document.getElementById("sideMenu");
+
+        const menuOverlay =
+        document.getElementById("menuOverlay");
+
+        const menuList =
+        document.getElementById("menuList");
+
+        /* render menu */
+        menuList.innerHTML =
+        diseases.map(item => `
+
+            <a href="./item.html?id=${item.id}">
+                ${item.title}
+            </a>
+
+        `).join("");
+
+        /* open */
+        menuToggle.onclick = () => {
+
+            sideMenu.classList.add("active");
+
+            menuOverlay.classList.add("active");
+
+        };
+
+        /* close */
+        menuOverlay.onclick = () => {
+
+            sideMenu.classList.remove("active");
+
+            menuOverlay.classList.remove("active");
+
+        };
+
+    }
+);
+
+</script>
 </body>
 </html>
