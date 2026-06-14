@@ -364,7 +364,7 @@ const diseases = [
     "Bộ Y tế Việt Nam"
   ]
 }
-}
+},
 
 
 /* =======================================================
@@ -548,7 +548,7 @@ const diseases = [
     ]
   }
 
-}
+},
 
 
 
@@ -734,8 +734,7 @@ const diseases = [
     ]
   }
 
-}
-
+},
 
 
    
@@ -920,7 +919,435 @@ const diseases = [
     ]
   }
 
+},
+
+   
+/* =======================================================
+   
+======================================================= */
+
+{
+  id: "tieu-duong-typ-2",
+
+  seoTitle:
+    "Thông tin tiểu đường type 2",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, yếu tố nguy cơ và cách kiểm soát bệnh tiểu đường type 2 hiệu quả.",
+
+  title:
+    "Tiểu đường type 2",
+
+  hero: {
+    badge: "Nội tiết - Chuyển hóa",
+    color1: "#ef6c00",
+    color2: "#ff9800",
+
+    desc:
+      "Tiểu đường type 2 là bệnh rối loạn chuyển hóa phổ biến làm tăng đường huyết kéo dài và có thể gây biến chứng nguy hiểm."
+  },
+
+  overview: {
+    title: "Tiểu đường type 2 là gì?",
+
+    content:
+      "Tiểu đường type 2 xảy ra khi cơ thể giảm đáp ứng với insulin hoặc không sản xuất đủ insulin để kiểm soát đường huyết.",
+
+    info:
+      "Bệnh tiến triển âm thầm nhưng có thể ảnh hưởng tim mạch, thận, mắt và thần kinh nếu kiểm soát kém."
+  },
+
+  symptoms: {
+    title: "Dấu hiệu thường gặp",
+
+    warning:
+      "Khát nước nhiều, tiểu nhiều hoặc sụt cân bất thường cần được kiểm tra đường huyết sớm.",
+
+    items: [
+
+      {
+        title: "Khát nước",
+        desc:
+          "Cảm giác khô miệng và uống nước nhiều hơn bình thường."
+      },
+
+      {
+        title: "Tiểu nhiều",
+        desc:
+          "Đi tiểu thường xuyên, đặc biệt vào ban đêm."
+      },
+
+      {
+        title: "Mệt mỏi",
+        desc:
+          "Cơ thể thiếu năng lượng và dễ kiệt sức."
+      },
+
+      {
+        title: "Vết thương lâu lành",
+        desc:
+          "Tổn thương da hoặc nhiễm trùng khó hồi phục."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần đi khám?",
+
+    items: [
+
+      {
+        title: "Đường huyết tăng cao",
+        desc:
+          "Xuất hiện chóng mặt, buồn nôn hoặc mệt nhiều cần đánh giá y tế."
+      },
+
+      {
+        title: "Biến chứng bàn chân",
+        desc:
+          "Loét hoặc tê bì chân cần được kiểm tra sớm."
+      },
+
+      {
+        title: "Mờ mắt",
+        desc:
+          "Giảm thị lực có thể liên quan biến chứng võng mạc do tiểu đường."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Thừa cân béo phì",
+      "Ít vận động",
+      "Tiền sử gia đình",
+      "Tăng huyết áp"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Kiểm soát cân nặng",
+      "Ăn giảm đường tinh luyện",
+      "Tập thể dục đều đặn",
+      "Khám sức khỏe định kỳ"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày đến vài tuần",
+
+        text:
+          "Người có khát nhiều, tiểu nhiều hoặc tiền sử gia đình mắc tiểu đường nên khám nội tiết để kiểm tra đường huyết.",
+
+        exam:
+          [
+            "Đường huyết đói",
+            "HbA1c",
+            "Xét nghiệm nước tiểu",
+            "Mỡ máu"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Mỗi 3–6 tháng",
+
+        text:
+          "Người mắc tiểu đường type 2 cần tái khám định kỳ để kiểm soát đường huyết và phát hiện biến chứng sớm.",
+
+        exam:
+          [
+            "HbA1c",
+            "Kiểm tra chức năng thận",
+            "Đo huyết áp",
+            "Khám mắt"
+          ]
+      },
+
+      {
+        level:"Tầm soát biến chứng",
+
+        time:"Ít nhất mỗi năm",
+
+        text:
+          "Người bệnh nên kiểm tra tim mạch, mắt và thần kinh định kỳ để giảm nguy cơ biến chứng lâu dài.",
+
+        exam:
+          [
+            "Điện tim",
+            "Khám võng mạc",
+            "Đánh giá thần kinh ngoại biên"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "American Diabetes Association (ADA)",
+      "World Health Organization (WHO)",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
+},
+
+   
+/* =======================================================
+   
+======================================================= */
+{
+  id: "benh-phoi-tac-nghen-man-tinh",
+
+  seoTitle:
+    "Thông tin bệnh phổi tắc nghẽn mạn tính COPD",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, nguyên nhân và cách kiểm soát bệnh phổi tắc nghẽn mạn tính COPD.",
+
+  title:
+    "Bệnh phổi tắc nghẽn mạn tính",
+
+  hero: {
+    badge: "Hô hấp - COPD",
+    color1: "#455a64",
+    color2: "#78909c",
+
+    desc:
+      "COPD là bệnh hô hấp mạn tính gây hạn chế luồng khí thở, thường tiến triển âm thầm và ảnh hưởng lâu dài đến chức năng phổi."
+  },
+
+  overview: {
+    title: "COPD là gì?",
+
+    content:
+      "Bệnh phổi tắc nghẽn mạn tính (COPD) là tình trạng viêm và hẹp đường thở kéo dài làm người bệnh khó thở và giảm khả năng hô hấp.",
+
+    info:
+      "Bệnh thường liên quan hút thuốc lá hoặc tiếp xúc lâu dài với khói bụi, ô nhiễm không khí."
+  },
+
+  symptoms: {
+    title: "Triệu chứng thường gặp",
+
+    warning:
+      "Ho kéo dài, khạc đờm và khó thở tăng dần là dấu hiệu cần được khám hô hấp sớm.",
+
+    items: [
+
+      {
+        title: "Khó thở",
+        desc:
+          "Ban đầu xuất hiện khi gắng sức, sau có thể khó thở cả lúc nghỉ."
+      },
+
+      {
+        title: "Ho mạn tính",
+        desc:
+          "Ho kéo dài nhiều tuần hoặc nhiều tháng."
+      },
+
+      {
+        title: "Khạc đờm",
+        desc:
+          "Đờm thường xuất hiện vào buổi sáng."
+      },
+
+      {
+        title: "Mệt mỏi",
+        desc:
+          "Giảm khả năng vận động và dễ kiệt sức."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần cấp cứu?",
+
+    items: [
+
+      {
+        title: "Khó thở nặng",
+        desc:
+          "Thở gấp, tím môi hoặc giảm oxy máu cần nhập viện ngay."
+      },
+
+      {
+        title: "Đờm đổi màu",
+        desc:
+          "Đờm vàng xanh hoặc sốt có thể gợi ý nhiễm trùng hô hấp."
+      },
+
+      {
+        title: "Lơ mơ hoặc mệt nhiều",
+        desc:
+          "Có thể liên quan suy hô hấp cần xử trí khẩn cấp."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Hút thuốc lá",
+      "Ô nhiễm không khí",
+      "Tiếp xúc khói bụi nghề nghiệp",
+      "Tiền sử bệnh hô hấp"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Ngừng hút thuốc",
+      "Đeo khẩu trang khi tiếp xúc bụi",
+      "Tiêm phòng cúm và phế cầu",
+      "Tập phục hồi chức năng hô hấp"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Ngay khi khó thở tăng nhanh",
+
+        text:
+          "Người bệnh khó thở dữ dội, tím tái hoặc nghi suy hô hấp cần đến cơ sở y tế cấp cứu ngay.",
+
+        exam:
+          [
+            "Đo SpO2",
+            "Khí máu động mạch",
+            "X-quang phổi",
+            "Đánh giá hô hấp"
+          ]
+      },
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày đến vài tuần",
+
+        text:
+          "Người ho kéo dài, khạc đờm hoặc khó thở khi vận động nên khám chuyên khoa hô hấp để tầm soát COPD.",
+
+        exam:
+          [
+            "Đo chức năng hô hấp",
+            "X-quang phổi",
+            "CT ngực",
+            "Khám hô hấp"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Mỗi 3–6 tháng",
+
+        text:
+          "Người mắc COPD cần tái khám định kỳ để đánh giá chức năng phổi và điều chỉnh điều trị phù hợp.",
+
+        exam:
+          [
+            "Hô hấp ký",
+            "Đánh giá oxy máu",
+            "Theo dõi triệu chứng"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "Global Initiative for Chronic Obstructive Lung Disease (GOLD)",
+      "World Health Organization (WHO)",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
 }
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
 
    
 /* =======================================================
