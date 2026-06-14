@@ -1,4 +1,4 @@
-const diseases = [
+export const diseases = [
 
 /* =======================================================
    1. ĐỘT QUỴ
