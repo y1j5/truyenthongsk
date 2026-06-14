@@ -1281,5 +1281,721 @@ const diseases = [
     ]
   }
 
+},
+   {
+  id: "benh-loang-xuong",
+
+  seoTitle:
+    "Thông tin bệnh loãng xương",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, nguyên nhân và cách phòng ngừa bệnh loãng xương ở người lớn tuổi và phụ nữ sau mãn kinh.",
+
+  title:
+    "Bệnh loãng xương",
+
+  hero: {
+    badge: "Cơ xương khớp",
+    color1: "#8e24aa",
+    color2: "#ba68c8",
+
+    desc:
+      "Loãng xương là bệnh lý làm giảm mật độ và chất lượng xương khiến xương giòn, dễ gãy và ảnh hưởng lớn đến khả năng vận động."
+  },
+
+  overview: {
+    title: "Loãng xương là gì?",
+
+    content:
+      "Loãng xương xảy ra khi cấu trúc xương suy yếu và mật độ khoáng trong xương giảm dần theo thời gian.",
+
+    info:
+      "Bệnh thường tiến triển âm thầm trong nhiều năm và chỉ được phát hiện khi xuất hiện đau lưng hoặc gãy xương." 
+  },
+
+  symptoms: {
+    title: "Dấu hiệu thường gặp",
+
+    warning:
+      "Đau lưng kéo dài, giảm chiều cao hoặc gãy xương sau va chạm nhẹ là dấu hiệu cần được kiểm tra sớm.",
+
+    items: [
+
+      {
+        title: "Đau nhức xương",
+        desc:
+          "Đau âm ỉ vùng lưng, hông hoặc các xương dài."
+      },
+
+      {
+        title: "Giảm chiều cao",
+        desc:
+          "Chiều cao giảm dần theo thời gian do lún xẹp đốt sống."
+      },
+
+      {
+        title: "Lưng còng",
+        desc:
+          "Tư thế khom hoặc gù lưng xuất hiện ở giai đoạn tiến triển."
+      },
+
+      {
+        title: "Dễ gãy xương",
+        desc:
+          "Gãy xương có thể xảy ra sau té ngã nhẹ hoặc vận động thông thường."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần đi khám?",
+
+    items: [
+
+      {
+        title: "Đau lưng dữ dội",
+        desc:
+          "Có thể liên quan gãy lún đốt sống do loãng xương."
+      },
+
+      {
+        title: "Gãy xương sau va chạm nhẹ",
+        desc:
+          "Cần đánh giá mật độ xương và nguy cơ gãy tái phát."
+      },
+
+      {
+        title: "Khó vận động",
+        desc:
+          "Đau hoặc biến dạng cột sống ảnh hưởng sinh hoạt hàng ngày."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Tuổi cao",
+      "Phụ nữ sau mãn kinh",
+      "Thiếu canxi và vitamin D",
+      "Ít vận động"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Bổ sung canxi hợp lý",
+      "Tắm nắng và bổ sung vitamin D",
+      "Tập thể dục thường xuyên",
+      "Hạn chế rượu bia và thuốc lá"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài tuần",
+
+        text:
+          "Người đau lưng kéo dài, giảm chiều cao hoặc phụ nữ sau mãn kinh nên kiểm tra mật độ xương sớm.",
+
+        exam:
+          [
+            "Đo mật độ xương DEXA",
+            "X-quang cột sống",
+            "Xét nghiệm canxi máu",
+            "Vitamin D"
+          ]
+      },
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Ngay khi nghi gãy xương",
+
+        text:
+          "Người đau dữ dội sau té ngã hoặc nghi gãy cổ xương đùi cần nhập viện để đánh giá và điều trị sớm.",
+
+        exam:
+          [
+            "X-quang",
+            "CT hoặc MRI",
+            "Đánh giá chức năng vận động"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Mỗi 6–12 tháng",
+
+        text:
+          "Người có nguy cơ cao hoặc đã được chẩn đoán loãng xương nên tái khám định kỳ để theo dõi mật độ xương.",
+
+        exam:
+          [
+            "Đo mật độ xương",
+            "Đánh giá nguy cơ té ngã",
+            "Kiểm tra vitamin D"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "World Health Organization (WHO)",
+      "International Osteoporosis Foundation",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
+},
+
+
+   {
+  id: "roi-loan-tram-cam",
+
+  seoTitle:
+    "Thông tin rối loạn trầm cảm",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, nguyên nhân và cách hỗ trợ điều trị rối loạn trầm cảm theo hướng khoa học và an toàn.",
+
+  title:
+    "Rối loạn trầm cảm",
+
+  hero: {
+    badge: "Sức khỏe tâm thần",
+    color1: "#5e35b1",
+    color2: "#7e57c2",
+
+    desc:
+      "Rối loạn trầm cảm là tình trạng ảnh hưởng kéo dài đến cảm xúc, suy nghĩ và hành vi, có thể tác động nghiêm trọng đến chất lượng cuộc sống."
+  },
+
+  overview: {
+    title: "Trầm cảm là gì?",
+
+    content:
+      "Trầm cảm là rối loạn tâm thần thường gặp với biểu hiện buồn bã kéo dài, giảm hứng thú và suy giảm năng lượng trong sinh hoạt hằng ngày.",
+
+    info:
+      "Bệnh có thể ảnh hưởng giấc ngủ, khả năng tập trung, các mối quan hệ xã hội và sức khỏe thể chất nếu không được hỗ trợ phù hợp."
+  },
+
+  symptoms: {
+    title: "Dấu hiệu thường gặp",
+
+    warning:
+      "Cảm giác buồn chán kéo dài, mất động lực hoặc thay đổi giấc ngủ cần được quan tâm và đánh giá sớm.",
+
+    items: [
+
+      {
+        title: "Buồn bã kéo dài",
+        desc:
+          "Tâm trạng uể oải, trống rỗng hoặc mất hy vọng trong nhiều ngày."
+      },
+
+      {
+        title: "Mất hứng thú",
+        desc:
+          "Không còn hứng thú với công việc hoặc hoạt động từng yêu thích."
+      },
+
+      {
+        title: "Rối loạn giấc ngủ",
+        desc:
+          "Khó ngủ, ngủ không sâu hoặc ngủ quá nhiều."
+      },
+
+      {
+        title: "Mệt mỏi",
+        desc:
+          "Giảm năng lượng, khó tập trung và dễ kiệt sức."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần hỗ trợ khẩn cấp?",
+
+    items: [
+
+      {
+        title: "Ý nghĩ làm hại bản thân",
+        desc:
+          "Cần liên hệ người thân hoặc cơ sở y tế ngay khi xuất hiện ý nghĩ tự làm hại bản thân."
+      },
+
+      {
+        title: "Mất kiểm soát cảm xúc",
+        desc:
+          "Hoảng loạn, kích động hoặc tuyệt vọng kéo dài cần được hỗ trợ chuyên môn."
+      },
+
+      {
+        title: "Không thể sinh hoạt bình thường",
+        desc:
+          "Suy giảm nghiêm trọng khả năng học tập, làm việc hoặc giao tiếp xã hội."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Căng thẳng kéo dài",
+      "Mất ngủ",
+      "Tiền sử gia đình",
+      "Biến cố tâm lý lớn"
+    ]
+  },
+
+  prevention: {
+    title: "Hỗ trợ phòng ngừa",
+
+    items: [
+      "Duy trì giấc ngủ ổn định",
+      "Tập thể dục thường xuyên",
+      "Giữ kết nối xã hội",
+      "Tìm hỗ trợ tâm lý khi cần"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày đến vài tuần",
+
+        text:
+          "Người buồn chán kéo dài, mất động lực hoặc rối loạn giấc ngủ nên được đánh giá bởi chuyên gia tâm lý hoặc bác sĩ tâm thần.",
+
+        exam:
+          [
+            "Đánh giá tâm lý",
+            "Khai thác triệu chứng",
+            "Sàng lọc trầm cảm",
+            "Đánh giá giấc ngủ"
+          ]
+      },
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Ngay lập tức",
+
+        text:
+          "Người có ý nghĩ tự làm hại bản thân hoặc hành vi nguy hiểm cần được hỗ trợ y tế khẩn cấp.",
+
+        exam:
+          [
+            "Đánh giá nguy cơ tự sát",
+            "Theo dõi tâm thần",
+            "Đánh giá an toàn"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Theo lịch chuyên gia",
+
+        text:
+          "Người đang điều trị trầm cảm cần tái khám định kỳ để theo dõi đáp ứng điều trị và sức khỏe tinh thần.",
+
+        exam:
+          [
+            "Đánh giá cảm xúc",
+            "Theo dõi giấc ngủ",
+            "Theo dõi tác dụng điều trị"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "World Health Organization (WHO)",
+      "American Psychiatric Association",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
+},
+   {
+  id: "ung-thu-da-day",
+
+  seoTitle:
+    "Thông tin ung thư dạ dày",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, yếu tố nguy cơ và cách phát hiện sớm ung thư dạ dày nhằm tăng hiệu quả điều trị.",
+
+  title:
+    "Ung thư dạ dày",
+
+  hero: {
+    badge: "Ung bướu - Tiêu hóa",
+    color1: "#ad1457",
+    color2: "#d81b60",
+
+    desc:
+      "Ung thư dạ dày thường tiến triển âm thầm trong giai đoạn đầu và có thể gây biến chứng nghiêm trọng nếu phát hiện muộn."
+  },
+
+  overview: {
+    title: "Ung thư dạ dày là gì?",
+
+    content:
+      "Ung thư dạ dày là tình trạng tế bào ác tính phát triển bất thường từ lớp niêm mạc dạ dày và có khả năng xâm lấn hoặc di căn.",
+
+    info:
+      "Các triệu chứng ban đầu thường không rõ ràng nên nhiều trường hợp được phát hiện ở giai đoạn muộn."
+  },
+
+  symptoms: {
+    title: "Dấu hiệu thường gặp",
+
+    warning:
+      "Đau vùng thượng vị kéo dài, sụt cân hoặc chán ăn cần được nội soi kiểm tra sớm.",
+
+    items: [
+
+      {
+        title: "Đau bụng",
+        desc:
+          "Đau âm ỉ vùng thượng vị hoặc cảm giác khó chịu sau ăn."
+      },
+
+      {
+        title: "Chán ăn",
+        desc:
+          "Ăn nhanh no, giảm cảm giác ngon miệng."
+      },
+
+      {
+        title: "Sụt cân",
+        desc:
+          "Giảm cân không rõ nguyên nhân trong thời gian ngắn."
+      },
+
+      {
+        title: "Xuất huyết tiêu hóa",
+        desc:
+          "Có thể xuất hiện nôn ra máu hoặc đi ngoài phân đen."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần cấp cứu?",
+
+    items: [
+
+      {
+        title: "Nôn ra máu",
+        desc:
+          "Xuất huyết tiêu hóa có thể gây mất máu nghiêm trọng."
+      },
+
+      {
+        title: "Đau bụng dữ dội",
+        desc:
+          "Có thể liên quan biến chứng thủng hoặc tắc nghẽn dạ dày."
+      },
+
+      {
+        title: "Mệt lả hoặc chóng mặt",
+        desc:
+          "Có thể do thiếu máu hoặc mất máu kéo dài."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Nhiễm vi khuẩn HP",
+      "Hút thuốc lá",
+      "Ăn nhiều thực phẩm mặn",
+      "Tiền sử gia đình mắc ung thư"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Điều trị vi khuẩn HP",
+      "Ăn nhiều rau xanh",
+      "Hạn chế thuốc lá và rượu bia",
+      "Nội soi khi có triệu chứng kéo dài"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày đến vài tuần",
+
+        text:
+          "Người đau thượng vị kéo dài, chán ăn hoặc sụt cân nên khám chuyên khoa tiêu hóa để đánh giá nguy cơ ung thư dạ dày.",
+
+        exam:
+          [
+            "Nội soi dạ dày",
+            "Sinh thiết",
+            "Xét nghiệm HP",
+            "CT bụng"
+          ]
+      },
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Ngay lập tức",
+
+        text:
+          "Người nôn ra máu, đi ngoài phân đen hoặc đau bụng dữ dội cần nhập viện cấp cứu ngay.",
+
+        exam:
+          [
+            "Nội soi cấp cứu",
+            "Xét nghiệm máu",
+            "Đánh giá mất máu",
+            "Chẩn đoán hình ảnh"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Theo lịch bác sĩ",
+
+        text:
+          "Người có tổn thương tiền ung thư hoặc tiền sử gia đình nên nội soi định kỳ để phát hiện sớm bất thường.",
+
+        exam:
+          [
+            "Nội soi dạ dày",
+            "Theo dõi mô bệnh học",
+            "Đánh giá nguy cơ tái phát"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "World Health Organization (WHO)",
+      "American Cancer Society",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
+},
+   {
+  id: "ung-thu-bang-quang",
+
+  seoTitle:
+    "Thông tin ung thư bàng quang",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, yếu tố nguy cơ và phương pháp phát hiện sớm ung thư bàng quang.",
+
+  title:
+    "Ung thư bàng quang",
+
+  hero: {
+    badge: "Ung bướu - Tiết niệu",
+    color1: "#1565c0",
+    color2: "#42a5f5",
+
+    desc:
+      "Ung thư bàng quang là bệnh lý ác tính đường tiết niệu thường gặp, có thể gây tiểu máu và ảnh hưởng nghiêm trọng đến chức năng tiết niệu."
+  },
+
+  overview: {
+    title: "Ung thư bàng quang là gì?",
+
+    content:
+      "Ung thư bàng quang xảy ra khi các tế bào trong niêm mạc bàng quang phát triển bất thường và hình thành khối u ác tính.",
+
+    info:
+      "Bệnh thường gặp ở người lớn tuổi, đặc biệt ở nam giới và người có tiền sử hút thuốc lá."
+  },
+
+  symptoms: {
+    title: "Dấu hiệu thường gặp",
+
+    warning:
+      "Tiểu ra máu dù không đau là dấu hiệu quan trọng cần được khám tiết niệu sớm.",
+
+    items: [
+
+      {
+        title: "Tiểu máu",
+        desc:
+          "Nước tiểu có màu đỏ hoặc hồng do lẫn máu."
+      },
+
+      {
+        title: "Tiểu nhiều lần",
+        desc:
+          "Cảm giác buồn tiểu thường xuyên hoặc tiểu gấp."
+      },
+
+      {
+        title: "Đau khi tiểu",
+        desc:
+          "Cảm giác nóng rát hoặc khó chịu khi đi tiểu."
+      },
+
+      {
+        title: "Đau vùng bụng dưới",
+        desc:
+          "Có thể xuất hiện khi khối u tiến triển."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần đi khám ngay?",
+
+    items: [
+
+      {
+        title: "Tiểu máu kéo dài",
+        desc:
+          "Tiểu máu tái diễn hoặc có cục máu đông cần được kiểm tra sớm."
+      },
+
+      {
+        title: "Bí tiểu",
+        desc:
+          "Khó tiểu hoặc không tiểu được có thể liên quan tắc nghẽn đường tiểu."
+      },
+
+      {
+        title: "Sụt cân nhanh",
+        desc:
+          "Mệt mỏi hoặc giảm cân không rõ nguyên nhân cần được đánh giá toàn diện."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Hút thuốc lá",
+      "Tiếp xúc hóa chất",
+      "Nhiễm trùng tiết niệu kéo dài",
+      "Tuổi cao"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Không hút thuốc",
+      "Uống đủ nước",
+      "Hạn chế tiếp xúc hóa chất độc hại",
+      "Khám tiết niệu định kỳ"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày đến vài tuần",
+
+        text:
+          "Người tiểu máu, tiểu gấp hoặc đau khi tiểu kéo dài nên khám chuyên khoa tiết niệu để phát hiện bất thường sớm.",
+
+        exam:
+          [
+            "Xét nghiệm nước tiểu",
+            "Siêu âm hệ tiết niệu",
+            "Nội soi bàng quang",
+            "CT bụng chậu"
+          ]
+      },
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Ngay lập tức",
+
+        text:
+          "Người tiểu máu nhiều, bí tiểu hoặc đau dữ dội vùng bụng dưới cần nhập viện để đánh giá và xử trí sớm.",
+
+        exam:
+          [
+            "Đánh giá chức năng thận",
+            "Nội soi cấp cứu",
+            "Xét nghiệm máu",
+            "Chẩn đoán hình ảnh"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Theo lịch bác sĩ",
+
+        text:
+          "Người đã điều trị ung thư bàng quang cần tái khám định kỳ để theo dõi nguy cơ tái phát.",
+
+        exam:
+          [
+            "Nội soi bàng quang",
+            "Xét nghiệm nước tiểu",
+            "CT kiểm tra tái phát"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "American Cancer Society",
+      "European Association of Urology",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
 }
 ];
