@@ -320,6 +320,41 @@
     display:block;
     border-radius:12px;
 }
+    .hero-content{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* background image */
+.hero-content::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('./header.jpg') center/cover no-repeat;
+    opacity: 0.25; /* độ ảo */
+    filter: blur(2px) scale(1.05);
+    z-index: 0;
+}
+
+/* lớp phủ màu */
+.hero-content::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.2)
+    );
+    z-index: 1;
+}
+
+/* content nổi lên trên */
+.hero-content > *{
+    position: relative;
+    z-index: 2;
+}
   </style>
 
 </head>
