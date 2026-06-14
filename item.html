@@ -311,7 +311,7 @@ font-family:"Montserrat",sans-serif;
 }
 
 .hero-left {
-    font-size:58px;
+    font-size:18px;
     line-height:1.05;
     font-weight:800;
 
@@ -338,7 +338,7 @@ font-family:"Montserrat",sans-serif;
         Arial,
         sans-serif;
 
-    font-size:58px;
+    font-size:20px;
 
     font-weight:800;
 
@@ -515,7 +515,7 @@ font-family:"Montserrat",sans-serif;
     backdrop-filter: blur(14px);
 
     color: #fff;
-    font-size: 26px;
+    font-size: 22px;
 
     cursor: pointer;
 
@@ -524,35 +524,53 @@ font-family:"Montserrat",sans-serif;
     box-shadow:
         0 8px 24px rgba(0,0,0,0.18);
 }
-
-/* SIDE MENU */
+/* MENU */
 .side-menu{
-    position: fixed;
+    position:fixed;
 
-    top: 0;
-    left: -320px;
+    top:0;
+    left:-100%;
 
-    width: 300px;
-    height: 100vh;
+    width:280px;
+    max-width:85%;
 
-    background: #fff;
+    height:100vh;
 
-    padding: 24px;
+    background:#fff;
 
-    z-index: 99999;
+    z-index:99999;
 
-    transition: 0.35s ease;
+    transition:0.32s ease;
 
-    overflow-y: auto;
+    overflow-y:auto;
 
     box-shadow:
-        0 0 40px rgba(0,0,0,0.18);
+        0 0 30px rgba(0,0,0,0.18);
 }
 
 .side-menu.active{
-    left: 0;
+    left:0;
 }
 
+/* overlay */
+.menu-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.45);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.25s ease;
+
+    z-index:99990;
+}
+
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
 /* HEADER */
 .menu-header{
     display:flex;
