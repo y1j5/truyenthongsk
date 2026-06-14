@@ -458,6 +458,128 @@
 
     filter:blur(10px);
 }
+
+
+/* MENU BUTTON */
+.menu-toggle{
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.16);
+
+    backdrop-filter: blur(14px);
+
+    color: #fff;
+    font-size: 26px;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* SIDE MENU */
+.side-menu{
+    position: fixed;
+
+    top: 0;
+    left: -320px;
+
+    width: 300px;
+    height: 100vh;
+
+    background: #fff;
+
+    padding: 24px;
+
+    z-index: 99999;
+
+    transition: 0.35s ease;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.18);
+}
+
+.side-menu.active{
+    left: 0;
+}
+
+/* HEADER */
+.menu-header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:30px;
+}
+
+.menu-header img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+.menu-header h3{
+    font-size:20px;
+    color:#222;
+}
+
+/* LINKS */
+.side-menu a{
+    display:block;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#333;
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    transition:0.25s ease;
+}
+
+.side-menu a:hover{
+    background:#f4f7fb;
+    transform:translateX(4px);
+}
+
+/* OVERLAY */
+.menu-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.4);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.3s ease;
+
+    z-index:9990;
+}
+
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+    
     body{
     color:#222;
 }
@@ -489,6 +611,22 @@ a{
     © 2026 - Thông tin sức khỏe cộng đồng
   </footer>
 <script src="./data.js?v=2"></script>
+  <script>
+
+/* render menu từ data.js */
+
+const menuList =
+document.getElementById("menuList");
+
+menuList.innerHTML = diseases.map(item => `
+
+    <a href="./item.html?id=${item.id}">
+        ${item.title}
+    </a>
+
+`).join("");
+
+</script>
   <script>
 
     const params =
@@ -557,6 +695,28 @@ a{
 
     <!-- LEFT -->
     <div class="hero-left">
+
+
+
+<button class="menu-toggle" id="menuToggle">
+    ☰
+</button>
+    <div class="side-menu" id="sideMenu">
+
+    <div class="menu-header">
+
+        <img
+            src="./logo-bv-new.png"
+            alt="Logo"
+        >
+
+        <h3>Danh mục bệnh</h3>
+
+    </div>
+
+    <div id="menuList"></div>
+
+</div>
 
         <div class="badge">
             ${disease.hero.badge}
