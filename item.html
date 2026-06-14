@@ -320,40 +320,121 @@
     display:block;
     border-radius:12px;
 }
-    .hero-content{
+/* HERO SECTION */
+.hero{
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
-}
 
-/* background image */
-.hero-content::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('./header.jpg') center/cover no-repeat;
-    opacity: 0.25; /* độ ảo */
-    filter: blur(2px) scale(1.05);
-    z-index: 0;
-}
+    padding: 70px 0;
+    min-height: auto;
 
-/* lớp phủ màu */
-.hero-content::after{
-    content: "";
-    position: absolute;
-    inset: 0;
     background: linear-gradient(
         135deg,
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.2)
+        var(--color1),
+        var(--color2)
     );
-    z-index: 1;
 }
 
-/* content nổi lên trên */
-.hero-content > *{
-    position: relative;
-    z-index: 2;
+/* container */
+.hero-content{
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+/* LEFT */
+.hero-left h1{
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 18px 0;
+}
+
+.hero-left p{
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 560px;
+}
+
+/* RIGHT IMAGE */
+.hero-right{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img{
+    width: 100%;
+    max-width: 620px;
+
+    height: 420px;
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.22);
+
+    transition: 0.35s ease;
+}
+
+.hero-right img:hover{
+    transform: translateY(-4px);
+}
+
+/* bg blur */
+.hero::before{
+    content:"";
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:rgba(255,255,255,0.08);
+
+    border-radius:50%;
+
+    top:-180px;
+    left:-120px;
+
+    filter:blur(10px);
+}
+
+/* MOBILE */
+@media(max-width: 992px){
+
+    .hero{
+        padding: 50px 0;
+    }
+
+    .hero-content{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-left{
+        text-align:center;
+    }
+
+    .hero-left h1{
+        font-size: 40px;
+    }
+
+    .hero-left p{
+        margin:auto;
+        font-size:16px;
+    }
+
+    .hero-right img{
+        max-width:100%;
+        height:260px;
+    }
+
 }
   </style>
 
@@ -433,60 +514,71 @@
         "
       >
 
-        <div class="hero-content">
+        <section class="hero">
 
-     
-        <div class="header-image">
-        <img src="./header.jpg" alt="Header">
-        </div>
+    <div class="hero-content">
 
-        <div class="logo-wrap">
-            <img
-            src="./logo-bv-new.png"
-            alt="Logo"
-            >
+        <!-- LEFT -->
+        <div class="hero-left">
+
+            <div class="badge">
+                ${disease.hero.badge}
             </div>
 
-          </div>
-          <div class="badge">
+            <h1>
+                ${disease.title}
+            </h1>
 
-            ${disease.hero.badge}
+            <p>
+                ${disease.hero.desc}
+            </p>
 
-          </div>
+            <div class="cta">
 
-          <h1>
+                <a
+                    href="#nhan-biet"
+                    class="btn btn-primary"
+                >
+                    Nhận biết nhanh
+                </a>
 
-            ${disease.title}
+                <a
+                    href="#xu-tri"
+                    class="btn btn-secondary"
+                >
+                    Xử trí cấp cứu
+                </a>
 
-          </h1>
-
-          <p>
-
-            ${disease.hero.desc}
-
-          </p>
-
-          <div class="cta">
-
-            <a
-              href="#nhan-biet"
-              class="btn btn-primary"
-            >
-              Nhận biết nhanh
-            </a>
-
-            <a
-              href="#xu-tri"
-              class="btn btn-secondary"
-            >
-              Xử trí cấp cứu
-            </a>
-
-          </div>
+            </div>
 
         </div>
 
-      </section>
+        <!-- RIGHT -->
+        <div class="hero-right">
+
+            <div class="header-image">
+
+                <img
+                    src="./header.jpg"
+                    alt="Header"
+                >
+
+            </div>
+
+            <div class="logo-wrap">
+
+                <img
+                    src="./logo-bv-new.png"
+                    alt="Logo"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
       <div class="container">
 
