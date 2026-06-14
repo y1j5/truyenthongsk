@@ -628,17 +628,23 @@
     z-index:9990;
 }
 
-    .site-contact{ 
+.site-contact{
   position:absolute;
-   right:0;
-   top:-70px;
-   max-width:320px;
+
+  right:120px;
+  bottom:10px;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
-  margin-left:12px;
+
+  max-width:320px;
+
   color:#fff;
-      z-index:5;
+
+  z-index:5;
+
+  text-align:right;
 }
 
 .site-name{
@@ -709,15 +715,17 @@ body{
   }
 
   /* CONTACT INFO */
-  .site-contact{
-    position:static;
+.site-contact{
+  position:absolute;
 
-    margin:0 0 16px;
+  left:14px;
+  right:14px;
+  bottom:90px;
 
-    color:#fff;
+  max-width:none;
 
-    width:100%;
-  }
+  text-align:left;
+}
 
   .site-name{
     font-size:18px;
