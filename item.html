@@ -35,7 +35,6 @@
   />
 
   <style>
-font-family:"Montserrat",sans-serif;
     *{
       margin:0;
       padding:0;
@@ -630,10 +629,10 @@ font-family:"Montserrat",sans-serif;
 }
 
     .site-contact{ 
-       position:absolute;
-
-    right:-255px;
-    top:-28px;
+  position:absolute;
+   right:0;
+   top:-70px;
+   max-width:320px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -661,7 +660,127 @@ font-family:"Montserrat",sans-serif;
     visibility:visible;
 }
 
-  
+
+
+/* FIX GLOBAL */
+body{
+  overflow-x:hidden;
+}
+
+/* FIX MOBILE */
+@media (max-width:768px){
+
+  .hero{
+    padding:90px 18px 50px;
+  }
+
+  .hero-content{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .hero-left h1{
+    font-size:34px;
+    line-height:1.15;
+    letter-spacing:-0.5px;
+  }
+
+  .hero-left p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .header-image{
+    border-radius:22px;
+  }
+
+  .header-image img{
+    height:240px;
+  }
+
+  .logo-wrap{
+    width:78px;
+    height:78px;
+
+    right:10px;
+    bottom:-18px;
+
+    padding:10px;
+  }
+
+  /* CONTACT INFO */
+  .site-contact{
+    position:static;
+
+    margin:0 0 16px;
+
+    color:#fff;
+
+    width:100%;
+  }
+
+  .site-name{
+    font-size:18px;
+  }
+
+  .site-meta{
+    flex-direction:column;
+    gap:6px;
+    font-size:13px;
+  }
+
+  .site-meta span{
+    word-break:break-word;
+  }
+
+  /* BUTTONS */
+  .cta{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  /* CARD */
+  .card{
+    padding:20px;
+    border-radius:14px;
+  }
+
+  .container{
+    padding:22px 14px;
+  }
+
+  /* MENU */
+  .side-menu{
+    width:82%;
+  }
+
+  .menu-toggle{
+    top:14px;
+    left:14px;
+
+    width:48px;
+    height:48px;
+
+    font-size:20px;
+  }
+
+  .hospital-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .exam-tags span{
+    font-size:13px;
+  }
+
+}
+ body{
+  font-family:"Montserrat",sans-serif;
+}   
   </style>
 
 </head>
