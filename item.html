@@ -611,22 +611,7 @@ a{
     © 2026 - Thông tin sức khỏe cộng đồng
   </footer>
 <script src="./data.js?v=2"></script>
-  <script>
 
-/* render menu từ data.js */
-
-const menuList =
-document.getElementById("menuList");
-
-menuList.innerHTML = diseases.map(item => `
-
-    <a href="./item.html?id=${item.id}">
-        ${item.title}
-    </a>
-
-`).join("");
-
-</script>
   <script>
 
     const params =
@@ -664,6 +649,7 @@ menuList.innerHTML = diseases.map(item => `
         "Disease not found"
       );
     }
+    
 
     document.title =
       disease.seoTitle;
@@ -946,7 +932,16 @@ menuList.innerHTML = diseases.map(item => `
   
 
     `;
+const menuList =
+document.getElementById("menuList");
 
+menuList.innerHTML = diseases.map(item => `
+
+    <a href="./item.html?id=${item.id}">
+        ${item.title}
+    </a>
+
+`).join("");
   </script>
 
 </body>
