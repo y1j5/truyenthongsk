@@ -371,6 +371,215 @@ const diseases = [
    
 ======================================================= */
 
+{
+  id: "dau-nua-dau",
+
+  seoTitle:
+    "Thông tin đau nửa đầu Migraine",
+
+  seoDescription:
+    "Tìm hiểu nguyên nhân, dấu hiệu nhận biết và cách kiểm soát đau nửa đầu migraine hiệu quả.",
+
+  title:
+    "Đau nửa đầu Migraine",
+
+  hero: {
+    badge: "Thần kinh - Đau đầu",
+    color1: "#7b1fa2",
+    color2: "#ab47bc",
+
+    desc:
+      "Đau nửa đầu migraine là tình trạng đau đầu tái diễn có thể ảnh hưởng lớn đến sinh hoạt và chất lượng cuộc sống."
+  },
+
+  overview: {
+    title: "Đau nửa đầu là gì?",
+
+    content:
+      "Migraine là một dạng đau đầu nguyên phát thường gây đau theo cơn, thường xuất hiện ở một bên đầu và có thể kèm buồn nôn hoặc nhạy cảm với ánh sáng.",
+
+    info:
+      "Bệnh có liên quan đến rối loạn hoạt động thần kinh và mạch máu não."
+  },
+
+  symptoms: {
+    title: "Triệu chứng thường gặp",
+
+    warning:
+      "Đau đầu dữ dội kéo dài, buồn nôn hoặc sợ ánh sáng cần được theo dõi và đánh giá y khoa.",
+
+    items: [
+
+      {
+        title: "Đau theo cơn",
+        desc:
+          "Cơn đau có thể kéo dài vài giờ đến vài ngày."
+      },
+
+      {
+        title: "Đau một bên đầu",
+        desc:
+          "Thường đau kiểu giật hoặc nhói theo nhịp mạch."
+      },
+
+      {
+        title: "Buồn nôn",
+        desc:
+          "Một số người có cảm giác buồn nôn hoặc nôn."
+      },
+
+      {
+        title: "Nhạy cảm ánh sáng",
+        desc:
+          "Khó chịu khi tiếp xúc ánh sáng mạnh hoặc tiếng ồn."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần đi khám?",
+
+    items: [
+
+      {
+        title: "Đau đầu đột ngột dữ dội",
+        desc:
+          "Có thể liên quan bệnh lý thần kinh nguy hiểm cần cấp cứu."
+      },
+
+      {
+        title: "Kèm yếu liệt",
+        desc:
+          "Tê yếu tay chân hoặc nói khó cần loại trừ đột quỵ."
+      },
+
+      {
+        title: "Đau kéo dài",
+        desc:
+          "Cơn đau tái diễn thường xuyên ảnh hưởng sinh hoạt nên khám chuyên khoa."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố làm tăng nguy cơ",
+
+    items: [
+      "Stress kéo dài",
+      "Thiếu ngủ",
+      "Rối loạn nội tiết",
+      "Tiền sử gia đình migraine"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Ngủ đủ giấc",
+      "Hạn chế căng thẳng",
+      "Uống đủ nước",
+      "Theo dõi thực phẩm kích thích đau đầu"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Trong vài giờ",
+
+        text:
+          "Nếu đau đầu dữ dội đột ngột, co giật hoặc rối loạn ý thức cần nhập viện ngay để loại trừ xuất huyết não hoặc đột quỵ.",
+
+        exam:
+          [
+            "CT não",
+            "MRI não",
+            "Khám thần kinh",
+            "Xét nghiệm máu"
+          ]
+      },
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày",
+
+        text:
+          "Người đau nửa đầu tái diễn nhiều lần hoặc ảnh hưởng công việc nên khám chuyên khoa thần kinh để đánh giá migraine.",
+
+        exam:
+          [
+            "Đo huyết áp",
+            "Khám thần kinh",
+            "Đánh giá yếu tố khởi phát"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Mỗi 6–12 tháng",
+
+        text:
+          "Người có migraine mạn tính nên tái khám định kỳ để điều chỉnh thuốc và kiểm soát tần suất cơn đau.",
+
+        exam:
+          [
+            "Theo dõi triệu chứng",
+            "Đánh giá giấc ngủ",
+            "Kiểm tra tim mạch"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "American Migraine Foundation",
+      "World Health Organization (WHO)",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
+}
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
+
+
+   
+/* =======================================================
+   
+======================================================= */
+
 
 
 
