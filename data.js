@@ -557,7 +557,184 @@ const diseases = [
    
 ======================================================= */
 
+{
+  id: "hen-suyen",
 
+  seoTitle:
+    "Thông tin bệnh hen suyễn",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu, nguyên nhân và cách kiểm soát hen suyễn để hạn chế cơn khó thở nguy hiểm.",
+
+  title:
+    "Hen suyễn",
+
+  hero: {
+    badge: "Hô hấp - Phế quản",
+    color1: "#1565c0",
+    color2: "#42a5f5",
+
+    desc:
+      "Hen suyễn là bệnh hô hấp mạn tính gây viêm và co thắt đường thở, có thể làm người bệnh khó thở từng cơn."
+  },
+
+  overview: {
+    title: "Hen suyễn là gì?",
+
+    content:
+      "Hen suyễn hay hen phế quản là tình trạng viêm mạn tính đường hô hấp khiến phế quản trở nên nhạy cảm và dễ co thắt.",
+
+    info:
+      "Bệnh có thể tái phát nhiều lần nhưng hoàn toàn có thể kiểm soát nếu điều trị và theo dõi đúng cách."
+  },
+
+  symptoms: {
+    title: "Triệu chứng thường gặp",
+
+    warning:
+      "Khò khè, khó thở hoặc tức ngực kéo dài cần được đánh giá sớm để tránh cơn hen cấp.",
+
+    items: [
+
+      {
+        title: "Khó thở",
+        desc:
+          "Cảm giác hụt hơi, khó hít sâu hoặc thở nhanh."
+      },
+
+      {
+        title: "Khò khè",
+        desc:
+          "Âm thanh rít khi thở ra, thường xuất hiện ban đêm."
+      },
+
+      {
+        title: "Ho kéo dài",
+        desc:
+          "Ho nhiều về đêm hoặc khi thay đổi thời tiết."
+      },
+
+      {
+        title: "Tức ngực",
+        desc:
+          "Cảm giác nặng hoặc siết chặt vùng ngực."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần cấp cứu?",
+
+    items: [
+
+      {
+        title: "Khó thở dữ dội",
+        desc:
+          "Người bệnh thở gấp, tím môi hoặc không nói được thành câu."
+      },
+
+      {
+        title: "Không đáp ứng thuốc",
+        desc:
+          "Triệu chứng không cải thiện sau khi dùng thuốc cắt cơn."
+      },
+
+      {
+        title: "Cơn hen kéo dài",
+        desc:
+          "Khò khè hoặc khó thở kéo dài cần nhập viện theo dõi."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Tiền sử dị ứng",
+      "Khói thuốc lá",
+      "Ô nhiễm không khí",
+      "Tiền sử gia đình mắc hen"
+    ]
+  },
+
+  prevention: {
+    title: "Cách phòng ngừa",
+
+    items: [
+      "Tránh khói thuốc",
+      "Giữ môi trường sạch bụi",
+      "Dùng thuốc đúng hướng dẫn",
+      "Tiêm phòng cúm định kỳ"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Khẩn cấp",
+
+        time:"Ngay khi xuất hiện cơn hen nặng",
+
+        text:
+          "Người bệnh khó thở nhiều, tím tái hoặc không đáp ứng thuốc hít cần đến cơ sở y tế cấp cứu ngay.",
+
+        exam:
+          [
+            "Đo SpO2",
+            "Khí máu động mạch",
+            "X-quang phổi",
+            "Đánh giá hô hấp"
+          ]
+      },
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài ngày",
+
+        text:
+          "Người ho kéo dài, khò khè tái diễn hoặc khó thở về đêm nên khám chuyên khoa hô hấp.",
+
+        exam:
+          [
+            "Đo chức năng hô hấp",
+            "Khám hô hấp",
+            "Test dị ứng"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Mỗi 3–6 tháng",
+
+        text:
+          "Người mắc hen suyễn cần tái khám định kỳ để kiểm soát cơn hen và điều chỉnh thuốc phù hợp.",
+
+        exam:
+          [
+            "Hô hấp ký",
+            "Theo dõi đáp ứng thuốc",
+            "Đánh giá kiểm soát hen"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "Global Initiative for Asthma (GINA)",
+      "World Health Organization (WHO)",
+      "Bộ Y tế Việt Nam"
+    ]
+  }
+
+}
 
 
 
@@ -566,7 +743,184 @@ const diseases = [
    
 ======================================================= */
 
+{
+  id: "benh-alzheimer",
 
+  seoTitle:
+    "Thông tin bệnh Alzheimer",
+
+  seoDescription:
+    "Tìm hiểu dấu hiệu sớm, nguyên nhân và cách chăm sóc người mắc bệnh Alzheimer.",
+
+  title:
+    "Bệnh Alzheimer",
+
+  hero: {
+    badge: "Thần kinh - Sa sút trí tuệ",
+    color1: "#5e35b1",
+    color2: "#7e57c2",
+
+    desc:
+      "Alzheimer là nguyên nhân phổ biến gây sa sút trí tuệ ở người lớn tuổi, ảnh hưởng đến trí nhớ và khả năng sinh hoạt hằng ngày."
+  },
+
+  overview: {
+    title: "Alzheimer là gì?",
+
+    content:
+      "Alzheimer là bệnh lý thoái hóa thần kinh tiến triển, gây suy giảm trí nhớ, khả năng tư duy và thay đổi hành vi theo thời gian.",
+
+    info:
+      "Bệnh thường tiến triển chậm nhưng có thể ảnh hưởng nghiêm trọng đến chất lượng cuộc sống và khả năng tự chăm sóc."
+  },
+
+  symptoms: {
+    title: "Dấu hiệu thường gặp",
+
+    warning:
+      "Hay quên kéo dài, mất định hướng hoặc thay đổi tính cách ở người lớn tuổi cần được đánh giá sớm.",
+
+    items: [
+
+      {
+        title: "Suy giảm trí nhớ",
+        desc:
+          "Quên thông tin mới hoặc lặp lại câu hỏi nhiều lần."
+      },
+
+      {
+        title: "Mất tập trung",
+        desc:
+          "Khó theo dõi công việc hoặc cuộc trò chuyện."
+      },
+
+      {
+        title: "Rối loạn định hướng",
+        desc:
+          "Dễ nhầm thời gian, địa điểm hoặc đường đi quen thuộc."
+      },
+
+      {
+        title: "Thay đổi hành vi",
+        desc:
+          "Có thể cáu gắt, lo âu hoặc giảm tương tác xã hội."
+      }
+
+    ]
+  },
+
+  emergency: {
+    title: "Khi nào cần khám ngay?",
+
+    items: [
+
+      {
+        title: "Sa sút nhanh",
+        desc:
+          "Trí nhớ và khả năng sinh hoạt giảm nhanh trong thời gian ngắn."
+      },
+
+      {
+        title: "Rối loạn hành vi nặng",
+        desc:
+          "Kích động, hoang tưởng hoặc mất kiểm soát cảm xúc."
+      },
+
+      {
+        title: "Nguy cơ té ngã",
+        desc:
+          "Mất định hướng hoặc đi lạc cần được theo dõi y tế."
+      }
+
+    ]
+  },
+
+  risks: {
+    title: "Yếu tố nguy cơ",
+
+    items: [
+      "Tuổi cao",
+      "Tiền sử gia đình",
+      "Tăng huyết áp",
+      "Đái tháo đường"
+    ]
+  },
+
+  prevention: {
+    title: "Cách giảm nguy cơ",
+
+    items: [
+      "Tập thể dục đều đặn",
+      "Duy trì hoạt động trí não",
+      "Kiểm soát bệnh tim mạch",
+      "Ngủ đủ giấc"
+    ]
+  },
+
+  hospitalSuggestion:{
+    title:"Khuyến nghị thăm khám",
+
+    items:[
+
+      {
+        level:"Nên khám sớm",
+
+        time:"Trong vài tuần đầu có triệu chứng",
+
+        text:
+          "Người lớn tuổi xuất hiện quên nhiều, giảm khả năng giao tiếp hoặc mất định hướng nên khám chuyên khoa thần kinh sớm.",
+
+        exam:
+          [
+            "Đánh giá trí nhớ",
+            "Khám thần kinh",
+            "MRI não",
+            "Xét nghiệm máu"
+          ]
+      },
+
+      {
+        level:"Theo dõi định kỳ",
+
+        time:"Mỗi 3–6 tháng",
+
+        text:
+          "Người đã được chẩn đoán Alzheimer cần tái khám để theo dõi tiến triển và điều chỉnh điều trị.",
+
+        exam:
+          [
+            "Đánh giá nhận thức",
+            "Theo dõi hành vi",
+            "Đánh giá khả năng sinh hoạt"
+          ]
+      },
+
+      {
+        level:"Hỗ trợ chăm sóc",
+
+        time:"Liên tục",
+
+        text:
+          "Gia đình và người chăm sóc nên được hướng dẫn cách hỗ trợ sinh hoạt và phòng nguy cơ té ngã hoặc đi lạc.",
+
+        exam:
+          [
+            "Đánh giá dinh dưỡng",
+            "Đánh giá vận động",
+            "Tư vấn chăm sóc"
+          ]
+      }
+
+    ],
+
+    guidelineSource:[
+      "Alzheimer's Association",
+      "World Health Organization (WHO)",
+      "National Institute on Aging"
+    ]
+  }
+
+}
 
    
 /* =======================================================
