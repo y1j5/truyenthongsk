@@ -38,8 +38,28 @@ h2 {
   margin-bottom: 25px;
 }
 
+.logo-wrap {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  margin: auto auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: 0 4px 12px #0002;
+  overflow: hidden;
+}
+
+.logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   border: 1px solid #e1e6ed;
   border-radius: 8px;
   overflow: hidden;
@@ -47,29 +67,84 @@ h2 {
 
 .section-title {
   background: #edf4fa;
-  padding: 12px;
+  padding: 13px;
   font-weight: bold;
 }
 
-.section-body { padding: 14px; }
+.section-body {
+  padding: 14px;
+}
 
-label {
-  display: block;
+.option-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 9px;
+}
+
+.option-btn {
+  border: 2px solid #dce3eb;
+  background: #fff;
+  color: #263445;
+  padding: 13px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 8px;
+  min-height: 60px;
+  transition: .15s;
 }
 
-select {
-  width: 100%;
-  padding: 11px;
-  border: 1px solid #ccd5df;
-  border-radius: 6px;
-  font-size: 15px;
+.option-btn .point {
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+  color: #777;
+}
+
+.option-btn:hover {
+  border-color: #1769aa;
+  background: #f0f7ff;
+}
+
+.option-btn.selected {
+  border-color: #1769aa;
+  background: #1769aa;
+  color: white;
+  box-shadow: 0 2px 7px #1769aa44;
+}
+
+.option-btn.selected .point {
+  color: white;
+}
+
+.option-btn.selected::before {
+  content: "✓ ";
+}
+
+.s0.selected { background: #23834a; border-color: #23834a; }
+.s1.selected { background: #c49a00; border-color: #c49a00; }
+.s2.selected { background: #e07800; border-color: #e07800; }
+.s3.selected { background: #c62828; border-color: #c62828; }
+
+.copd-group {
+  display: flex;
+  gap: 10px;
+}
+
+.copd-group button {
+  flex: 1;
+  padding: 13px;
+  border: 2px solid #dce3eb;
   background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-select:focus {
-  outline: 2px solid #4a90d9;
+.copd-group button.active {
+  background: #1769aa;
+  color: white;
+  border-color: #1769aa;
 }
 
 .result {
@@ -100,7 +175,7 @@ select:focus {
 .score-row {
   display: flex;
   justify-content: space-between;
-  padding: 8px;
+  padding: 9px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -110,7 +185,7 @@ select:focus {
   text-align: center;
 }
 
-.s0 { background: #f1f1f1; }
+.s0 { background: #e5f4e9; }
 .s1 { background: #fff3a6; }
 .s2 { background: #ffbd69; }
 .s3 { background: #ef7777; color: white; }
@@ -129,96 +204,64 @@ select:focus {
   margin-top: 15px;
 }
 
-button {
+.action-btn {
   flex: 1;
-  padding: 12px;
+  padding: 13px;
   border: 0;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
 }
 
+.home { background: #23834a; color: white; }
 .reset { background: #e1e6ed; }
 .print { background: #1769aa; color: white; }
+
+button:focus-visible {
+  outline: 3px solid #8bbcff;
+  outline-offset: 2px;
+}
 
 @media(max-width:600px) {
   body { padding: 8px; }
   .news-container { padding: 14px; }
+  .option-group { grid-template-columns: repeat(2, 1fr); }
+  .buttons { flex-wrap: wrap; }
+  .action-btn { min-width: 28%; }
 }
-  
-    .logo-wrap{
 
-      width:120px;
-      height:120px;
-
-      background:white;
-
-      border-radius:50%;
-
-      margin:auto auto 24px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      padding:12px;
-
-      box-shadow:
-      0 4px 12px rgba(0,0,0,0.12);
-
-      overflow:hidden;
-    }
-
-    .logo-wrap img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-    }
-
-    @media(max-width:768px){
-
-      .hero h1{
-        font-size:32px;
-      }
-
-      .hero p{
-        font-size:16px;
-      }
-
-    }
+@media print {
+  body { background: white; padding: 0; }
+  .news-container { box-shadow: none; }
+  .buttons { display: none; }
+  .option-btn:not(.selected) { display: none; }
+}
 </style>
 </head>
 
 <body>
 <div class="news-container">
+
 <section class="hero">
+  <div class="logo-wrap">
+    <img src="./logo-bv-new.png" alt="Logo">
+  </div>
 
-    <div class="logo-wrap">
-
-      <img
-        src="./logo-bv-new.png"
-        alt="Logo"
-      >
-
-    </div>
-
-<h2>THANG ĐIỂM CẢNH BÁO SỚM NEWS2</h2>
-<div class="subtitle">Đánh giá tình trạng người bệnh</div>
-
-
-  </section>
-
+  <h2>THANG ĐIỂM CẢNH BÁO SỚM NEWS2</h2>
+  <div class="subtitle">Đánh giá tình trạng người bệnh</div>
+</section>
 
 <div class="section">
   <div class="section-title">Phân loại hô hấp</div>
   <div class="section-body">
-    <label>Thang SpO₂</label>
-    <select id="copd" onchange="updateSpO2()">
-      <option value="1">Không COPD - Thang 1</option>
-      <option value="2">Có COPD - Thang 2</option>
-    </select>
+    <div class="copd-group">
+      <button id="copd1" class="active" onclick="setCOPD(1)">
+        Không COPD<br>Thang 1
+      </button>
+      <button id="copd2" onclick="setCOPD(2)">
+        Có COPD<br>Thang 2
+      </button>
+    </div>
   </div>
 </div>
 
@@ -234,9 +277,9 @@ button {
 </div>
 
 <div class="buttons">
-  <button class="home" onclick="goHome()">⌂ Home</button>
-  <button class="reset" onclick="resetForm()">Làm mới</button>
-  <button class="print" onclick="window.print()">In kết quả</button>
+  <button class="action-btn home" onclick="goHome()">⌂ Home</button>
+  <button class="action-btn reset" onclick="resetForm()">Làm mới</button>
+  <button class="action-btn print" onclick="window.print()">In kết quả</button>
 </div>
 
 <p style="font-size:12px;color:#777;margin-top:20px">
@@ -247,14 +290,16 @@ người bệnh diễn biến xấu. Không thay thế đánh giá lâm sàng.
 </div>
 
 <script>
+let copd = 1;
+let answers = {};
+
 const parameters = [
 {
  id:"rr",
  title:"1. Nhịp thở (lần/phút)",
  options:[
   ["≤ 8",3],["9 - 11",1],
-  ["12 - 20",0],["21 - 24",2],
-  ["≥ 25",3]
+  ["12 - 20",0],["21 - 24",2],["≥ 25",3]
  ]
 },
 {
@@ -274,8 +319,7 @@ const parameters = [
  title:"4. Huyết áp tâm thu (mmHg)",
  options:[
   ["≤ 90",3],["91 - 100",2],
-  ["101 - 110",1],["111 - 219",0],
-  ["≥ 220",3]
+  ["101 - 110",1],["111 - 219",0],["≥ 220",3]
  ]
 },
 {
@@ -320,15 +364,25 @@ const scale2 = [
  ["≥ 97 (thở oxy)",3]
 ];
 
+function setCOPD(value) {
+ copd = value;
+
+ document.getElementById("copd1").classList.toggle("active", value === 1);
+ document.getElementById("copd2").classList.toggle("active", value === 2);
+
+ delete answers.spo2;
+ renderFields();
+ calculate();
+}
+
 function renderFields() {
  const container = document.getElementById("fields");
  container.innerHTML = "";
 
  parameters.forEach(p => {
-  let options = p.id === "spo2"
-    ? (document.getElementById("copd").value === "1"
-       ? scale1 : scale2)
-    : p.options;
+  const options = p.id === "spo2"
+   ? (copd === 1 ? scale1 : scale2)
+   : p.options;
 
   const section = document.createElement("div");
   section.className = "section";
@@ -340,33 +394,46 @@ function renderFields() {
   const body = document.createElement("div");
   body.className = "section-body";
 
-  const select = document.createElement("select");
-  select.id = p.id;
+  const group = document.createElement("div");
+  group.className = "option-group";
 
-  const defaultOption = document.createElement("option");
-  defaultOption.value = "";
-  defaultOption.textContent = "-- Chọn giá trị --";
-  select.appendChild(defaultOption);
+  options.forEach(([label, score], index) => {
+   const button = document.createElement("button");
+   button.type = "button";
+   button.className = "option-btn s" + score;
 
-  options.forEach(([label, score]) => {
-   const option = document.createElement("option");
-   option.value = score;
-   option.textContent = label + " (Điểm " + score + ")";
-   select.appendChild(option);
+   button.innerHTML = `
+    ${label}
+    <span class="point">Điểm ${score}</span>
+   `;
+
+   if (answers[p.id]?.index === index) {
+    button.classList.add("selected");
+   }
+
+   button.addEventListener("click", () => {
+    answers[p.id] = {
+     index: index,
+     score: score,
+     label: label
+    };
+
+    group.querySelectorAll("button").forEach(b =>
+     b.classList.remove("selected")
+    );
+
+    button.classList.add("selected");
+    calculate();
+   });
+
+   group.appendChild(button);
   });
 
-  select.addEventListener("change", calculate);
-
-  body.appendChild(select);
+  body.appendChild(group);
   section.appendChild(title);
   section.appendChild(body);
   container.appendChild(section);
  });
-}
-
-function updateSpO2() {
- renderFields();
- calculate();
 }
 
 function calculate() {
@@ -376,26 +443,28 @@ function calculate() {
  let details = "";
 
  parameters.forEach(p => {
-  const el = document.getElementById(p.id);
+  const answer = answers[p.id];
 
-  if (!el || el.value === "") return;
+  if (!answer) return;
 
-  const score = Number(el.value);
+  const score = answer.score;
+
   total += score;
   selected++;
-
   highest = Math.max(highest, score);
 
   details += `
    <div class="score-row s${score}">
-    <span>${p.title}</span>
+    <span>${p.title}: ${answer.label}</span>
     <span class="score">${score}</span>
-   </div>`;
+   </div>
+  `;
  });
 
  document.getElementById("total").textContent = total;
+
  document.getElementById("count").textContent =
-   `Đã chọn ${selected}/7 thông số`;
+  `Đã chọn ${selected}/7 thông số`;
 
  document.getElementById("detail").innerHTML = details;
 
@@ -421,26 +490,35 @@ function calculate() {
   if (highest === 3) {
    warning = "CẢNH BÁO: Có ít nhất một thông số đạt 3 điểm. Cần đánh giá và xử trí khẩn theo quy trình.";
   }
+
+  if (total >= 5) {
+   warning = "CẢNH BÁO: NEWS2 từ 5 điểm trở lên. Cần đánh giá lâm sàng khẩn và kích hoạt quy trình đáp ứng phù hợp.";
+  }
  } else {
   status = "CHƯA ĐỦ THÔNG SỐ";
   warning = "Vui lòng đánh giá đầy đủ 7 thông số.";
- }
-
- if (selected === 7 && total >= 5) {
-  warning = "CẢNH BÁO: NEWS2 từ 5 điểm trở lên. Cần đánh giá lâm sàng khẩn và kích hoạt quy trình đáp ứng phù hợp.";
  }
 
  document.getElementById("status").textContent = status;
  document.getElementById("status").style.color = color;
 
  document.getElementById("warning").innerHTML =
-   warning ? `<div class="warning">${warning}</div>` : "";
+  warning ? `<div class="warning">${warning}</div>` : "";
 }
 
 function resetForm() {
- document.getElementById("copd").value = "1";
+ copd = 1;
+ answers = {};
+
+ document.getElementById("copd1").classList.add("active");
+ document.getElementById("copd2").classList.remove("active");
+
  renderFields();
  calculate();
+}
+
+function goHome() {
+ window.location.href = "/";
 }
 
 renderFields();
