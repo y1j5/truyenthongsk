@@ -296,8 +296,37 @@ người bệnh diễn biến xấu. Không thay thế đánh giá lâm sàng.
 </div>
 
 <script>
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbw2B0cnUDuw-CzM68Q3DtaEX_K2XE3OqMRzUNOhyov08l1MPtcSSgy7MM4YNoJYqYcRrQ/exec";
+
+let recorded = false;
 let copd = 1;
 let answers = {};
+
+function recordToSheet(total) {
+
+  const p = new URLSearchParams({
+    action: "record",
+    copd: copd === 1 ? "Không COPD" : "COPD",
+    total: total,
+
+    rr: answers.rr.score,
+    spo2: answers.spo2.score,
+    oxygen: answers.oxygen.score,
+    bp: answers.bp.score,
+    pulse: answers.pulse.score,
+    conscious: answers.conscious.score,
+    temp: answers.temp.score
+  });
+
+  fetch(GOOGLE_SCRIPT_URL + "?" + p.toString(), {
+    method: "GET",
+    mode: "no-cors",
+    cache: "no-store"
+  }).catch(error => {
+    console.error("Lỗi gửi dữ liệu NEWS2:", error);
+  });
+}
 
 const parameters = [
 {
@@ -371,6 +400,7 @@ const scale2 = [
 ];
 
 function setCOPD(value) {
+ recorded = false;
  copd = value;
 
  document.getElementById("copd1").classList.toggle("active", value === 1);
@@ -510,9 +540,14 @@ function calculate() {
 
  document.getElementById("warning").innerHTML =
   warning ? `<div class="warning">${warning}</div>` : "";
+  if (selected === 7 && !recorded) {
+  recorded = true;
+  recordToSheet(total);
+}
 }
 
 function resetForm() {
+ recorded = false;
  copd = 1;
  answers = {};
 
