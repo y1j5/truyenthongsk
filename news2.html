@@ -96,36 +96,42 @@ h2 {
 
 .option-btn .point {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 6px;
-  color: #777;
+  font-weight: bold;
 }
 
-.option-btn:hover {
-  border-color: #1769aa;
-  background: #f0f7ff;
-}
+/* Màu chữ theo mức điểm */
+.option-btn.s0 .point { color: #23834a; }
+.option-btn.s1 .point { color: #b18a00; }
+.option-btn.s2 .point { color: #e07800; }
+.option-btn.s3 .point { color: #c62828; }
 
+/* Chỉ đổi màu nút khi được chọn */
 .option-btn.selected {
   border-color: #1769aa;
   background: #1769aa;
   color: white;
-  box-shadow: 0 2px 7px #1769aa44;
 }
 
 .option-btn.selected .point {
   color: white;
 }
 
-.option-btn.selected::before {
-  content: "✓ ";
+.option-btn:hover:not(.selected) {
+  border-color: #1769aa;
+  background: #f5f9ff;
 }
 
-.s0.selected { background: #23834a; border-color: #23834a; }
-.s1.selected { background: #c49a00; border-color: #c49a00; }
-.s2.selected { background: #e07800; border-color: #e07800; }
-.s3.selected { background: #c62828; border-color: #c62828; }
-
+/* Bỏ màu nền theo điểm khi chọn */
+.s0.selected,
+.s1.selected,
+.s2.selected,
+.s3.selected {
+  background: #1769aa;
+  border-color: #1769aa;
+  color: white;
+}
 .copd-group {
   display: flex;
   gap: 10px;
