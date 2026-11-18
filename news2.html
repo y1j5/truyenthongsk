@@ -303,10 +303,54 @@ let recorded = false;
 let copd = 1;
 let answers = {};
 
+function getDeviceInfo() {
+  const ua = navigator.userAgent;
+
+  let device = "Desktop";
+
+  if (/iPad|Tablet/i.test(ua)) {
+    device = "Tablet";
+  } else if (/Mobi|Android|iPhone/i.test(ua)) {
+    device = "Mobile";
+  }
+
+  let os = "Unknown";
+
+  if (/Windows/i.test(ua)) os = "Windows";
+  else if (/Android/i.test(ua)) os = "Android";
+  else if (/iPhone|iPad|iPod/i.test(ua)) os = "iOS";
+  else if (/Mac OS X|Macintosh/i.test(ua)) os = "macOS";
+  else if (/Linux/i.test(ua)) os = "Linux";
+
+  let browser = "Unknown";
+
+  if (/Edg\//i.test(ua)) browser = "Microsoft Edge";
+  else if (/OPR\//i.test(ua)) browser = "Opera";
+  else if (/SamsungBrowser/i.test(ua)) browser = "Samsung Internet";
+  else if (/Firefox\//i.test(ua)) browser = "Firefox";
+  else if (/Chrome\//i.test(ua)) browser = "Google Chrome";
+  else if (/Safari\//i.test(ua)) browser = "Safari";
+
+  return {
+    device,
+    os,
+    browser,
+    screen: `${screen.width}x${screen.height}`,
+    language: navigator.language,
+    timezone: Intl.DateTimeFormat()
+      .resolvedOptions().timeZone,
+    useragent: ua
+  };
+}
+
+
 function recordToSheet(total) {
+
+  const deviceInfo = getDeviceInfo();
 
   const p = new URLSearchParams({
     action: "record",
+
     copd: copd === 1 ? "Không COPD" : "COPD",
     total: total,
 
@@ -316,7 +360,15 @@ function recordToSheet(total) {
     bp: answers.bp.score,
     pulse: answers.pulse.score,
     conscious: answers.conscious.score,
-    temp: answers.temp.score
+    temp: answers.temp.score,
+
+    device: deviceInfo.device,
+    os: deviceInfo.os,
+    browser: deviceInfo.browser,
+    screen: deviceInfo.screen,
+    language: deviceInfo.language,
+    timezone: deviceInfo.timezone,
+    useragent: deviceInfo.useragent
   });
 
   fetch(GOOGLE_SCRIPT_URL + "?" + p.toString(), {
@@ -324,9 +376,10 @@ function recordToSheet(total) {
     mode: "no-cors",
     cache: "no-store"
   }).catch(error => {
-    console.error("Lỗi gửi dữ liệu NEWS2:", error);
+    console.error("Lỗi ghi NEWS2:", error);
   });
 }
+
 
 const parameters = [
 {
