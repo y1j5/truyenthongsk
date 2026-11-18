@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đánh giá cảnh báo sớm NEWS2</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f6fa;
+  margin: 0;
+  padding: 20px;
+  color: #263445;
+}
+
+.news-container {
+  max-width: 950px;
+  margin: auto;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px #0001;
+}
+
+h2 {
+  text-align: center;
+  color: #1769aa;
+  margin-top: 0;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.section {
+  margin-bottom: 20px;
+  border: 1px solid #e1e6ed;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section-title {
+  background: #edf4fa;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.section-body { padding: 14px; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccd5df;
+  border-radius: 6px;
+  font-size: 15px;
+  background: white;
+}
+
+select:focus {
+  outline: 2px solid #4a90d9;
+}
+
+.result {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f7f9fc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.total {
+  font-size: 52px;
+  font-weight: bold;
+  color: #1769aa;
+}
+
+.status {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 12px;
+}
+
+.detail {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.score {
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+
+.s0 { background: #f1f1f1; }
+.s1 { background: #fff3a6; }
+.s2 { background: #ffbd69; }
+.s3 { background: #ef7777; color: white; }
+
+.warning {
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+  background: #fff3cd;
+  color: #795600;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset { background: #e1e6ed; }
+.print { background: #1769aa; color: white; }
+
+@media(max-width:600px) {
+  body { padding: 8px; }
+  .news-container { padding: 14px; }
+}
+</style>
+</head>
+
+<body>
+<div class="news-container">
+
+<h2>THANG ĐIỂM CẢNH BÁO SỚM NEWS2</h2>
+<div class="subtitle">Đánh giá tình trạng người bệnh</div>
+
+<div class="section">
+  <div class="section-title">Phân loại hô hấp</div>
+  <div class="section-body">
+    <label>Thang SpO₂</label>
+    <select id="copd" onchange="updateSpO2()">
+      <option value="1">Không COPD - Thang 1</option>
+      <option value="2">Có COPD - Thang 2</option>
+    </select>
+  </div>
+</div>
+
+<div id="fields"></div>
+
+<div class="result">
+  <div>TỔNG ĐIỂM NEWS2</div>
+  <div class="total" id="total">0</div>
+  <div class="status" id="status">Chưa đánh giá</div>
+  <div id="count">Đã chọn 0/7 thông số</div>
+  <div class="detail" id="detail"></div>
+  <div id="warning"></div>
+</div>
+
+<div class="buttons">
+  <button class="reset" onclick="resetForm()">Làm mới</button>
+  <button class="print" onclick="window.print()">In kết quả</button>
+</div>
+
+<p style="font-size:12px;color:#777;margin-top:20px">
+NEWS2 là công cụ hỗ trợ đánh giá và phát hiện sớm tình trạng
+người bệnh diễn biến xấu. Không thay thế đánh giá lâm sàng.
+</p>
+
+</div>
+
+<script>
+const parameters = [
+{
+ id:"rr",
+ title:"1. Nhịp thở (lần/phút)",
+ options:[
+  ["≤ 8",3],["9 - 11",1],
+  ["12 - 20",0],["21 - 24",2],
+  ["≥ 25",3]
+ ]
+},
+{
+ id:"spo2",
+ title:"2. SpO₂ (%)",
+ options:[]
+},
+{
+ id:"oxygen",
+ title:"3. Thở oxy",
+ options:[
+  ["Không",0],["Có",2]
+ ]
+},
+{
+ id:"bp",
+ title:"4. Huyết áp tâm thu (mmHg)",
+ options:[
+  ["≤ 90",3],["91 - 100",2],
+  ["101 - 110",1],["111 - 219",0],
+  ["≥ 220",3]
+ ]
+},
+{
+ id:"pulse",
+ title:"5. Mạch (lần/phút)",
+ options:[
+  ["≤ 40",3],["41 - 50",1],
+  ["51 - 90",0],["91 - 110",1],
+  ["111 - 130",2],["≥ 131",3]
+ ]
+},
+{
+ id:"conscious",
+ title:"6. Ý thức",
+ options:[
+  ["Tỉnh táo (A)",0],
+  ["Không tỉnh táo (C,V,P,U)",3]
+ ]
+},
+{
+ id:"temp",
+ title:"7. Nhiệt độ (°C)",
+ options:[
+  ["≤ 35.0",3],["35.1 - 36.0",1],
+  ["36.1 - 38.0",0],
+  ["38.1 - 39.0",1],["≥ 39.1",2]
+ ]
+}
+];
+
+const scale1 = [
+ ["≤ 91",3],["92 - 93",2],
+ ["94 - 95",1],["≥ 96",0]
+];
+
+const scale2 = [
+ ["≤ 83",3],["84 - 85",2],
+ ["86 - 87",1],["88 - 92",0],
+ ["≥ 93 (khí trời)",0],
+ ["93 - 94 (thở oxy)",1],
+ ["95 - 96 (thở oxy)",2],
+ ["≥ 97 (thở oxy)",3]
+];
+
+function renderFields() {
+ const container = document.getElementById("fields");
+ container.innerHTML = "";
+
+ parameters.forEach(p => {
+  let options = p.id === "spo2"
+    ? (document.getElementById("copd").value === "1"
+       ? scale1 : scale2)
+    : p.options;
+
+  const section = document.createElement("div");
+  section.className = "section";
+
+  const title = document.createElement("div");
+  title.className = "section-title";
+  title.textContent = p.title;
+
+  const body = document.createElement("div");
+  body.className = "section-body";
+
+  const select = document.createElement("select");
+  select.id = p.id;
+
+  const defaultOption = document.createElement("option");
+  defaultOption.value = "";
+  defaultOption.textContent = "-- Chọn giá trị --";
+  select.appendChild(defaultOption);
+
+  options.forEach(([label, score]) => {
+   const option = document.createElement("option");
+   option.value = score;
+   option.textContent = label + " (Điểm " + score + ")";
+   select.appendChild(option);
+  });
+
+  select.addEventListener("change", calculate);
+
+  body.appendChild(select);
+  section.appendChild(title);
+  section.appendChild(body);
+  container.appendChild(section);
+ });
+}
+
+function updateSpO2() {
+ renderFields();
+ calculate();
+}
+
+function calculate() {
+ let total = 0;
+ let selected = 0;
+ let highest = 0;
+ let details = "";
+
+ parameters.forEach(p => {
+  const el = document.getElementById(p.id);
+
+  if (!el || el.value === "") return;
+
+  const score = Number(el.value);
+  total += score;
+  selected++;
+
+  highest = Math.max(highest, score);
+
+  details += `
+   <div class="score-row s${score}">
+    <span>${p.title}</span>
+    <span class="score">${score}</span>
+   </div>`;
+ });
+
+ document.getElementById("total").textContent = total;
+ document.getElementById("count").textContent =
+   `Đã chọn ${selected}/7 thông số`;
+
+ document.getElementById("detail").innerHTML = details;
+
+ let status = "Chưa đánh giá";
+ let color = "#1769aa";
+ let warning = "";
+
+ if (selected === 7) {
+  if (total >= 7) {
+   status = "NGUY CƠ CAO";
+   color = "#c62828";
+  } else if (total >= 5) {
+   status = "NGUY CƠ TRUNG BÌNH";
+   color = "#e07800";
+  } else if (total >= 1) {
+   status = "NGUY CƠ THẤP";
+   color = "#b18a00";
+  } else {
+   status = "NGUY CƠ THẤP";
+   color = "#23834a";
+  }
+
+  if (highest === 3) {
+   warning = "CẢNH BÁO: Có ít nhất một thông số đạt 3 điểm. Cần đánh giá và xử trí khẩn theo quy trình.";
+  }
+ } else {
+  status = "CHƯA ĐỦ THÔNG SỐ";
+  warning = "Vui lòng đánh giá đầy đủ 7 thông số.";
+ }
+
+ if (selected === 7 && total >= 5) {
+  warning = "CẢNH BÁO: NEWS2 từ 5 điểm trở lên. Cần đánh giá lâm sàng khẩn và kích hoạt quy trình đáp ứng phù hợp.";
+ }
+
+ document.getElementById("status").textContent = status;
+ document.getElementById("status").style.color = color;
+
+ document.getElementById("warning").innerHTML =
+   warning ? `<div class="warning">${warning}</div>` : "";
+}
+
+function resetForm() {
+ document.getElementById("copd").value = "1";
+ renderFields();
+ calculate();
+}
+
+renderFields();
+calculate();
+</script>
+</body>
+</html>
